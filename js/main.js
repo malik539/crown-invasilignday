@@ -7,7 +7,7 @@
   'use strict';
 
   var CONFIG = {
-    thankYouUrl: '/invisalign-day/thank-you/',
+    thankYouUrl: 'invisalign-day/thank-you/index.html',
     attributionKeys: ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'],
     storageKey: 'cdc_invisalign_day_attrib',
     enhancedConversionKey: 'cdc_invisalign_day_ec',
@@ -267,7 +267,7 @@
         .then(function () {
           // No form values in the event: the thank-you page view is the Google Ads conversion.
           dataLayer.push({ event: 'generate_lead', form_location: form.getAttribute('data-location') || 'unknown' });
-          window.location.assign(CONFIG.thankYouUrl);
+          window.location.assign(new URL(CONFIG.thankYouUrl, window.location.href).href);
         })
         .catch(function (err) {
           console.error(err);

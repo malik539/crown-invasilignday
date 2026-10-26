@@ -22,7 +22,7 @@ npm run build        # compiles css/site.css
 npm run serve        # http://localhost:3000
 ```
 
-Paths are root-relative (`/css/site.css`, `/js/main.js`, `/img/...`), so serve from the site root.
+Asset paths are relative, so the pages work opened directly from disk, served from the site root, or from a subfolder (e.g. GitHub Pages).
 
 ## Launch checklist (every `[BRACKETED]` placeholder is visible on the page until replaced)
 
@@ -49,7 +49,7 @@ Both forms post the same fields as `multipart/form-data` to the `action` URL via
 
 A honeypot field (`website`) is stripped before sending; bots that fill it are dropped silently. No CAPTCHA by design. If spam appears, add invisible reCAPTCHA in `submitLead()` in `js/main.js`.
 
-On success the page pushes `generate_lead` (no form values) to the dataLayer and redirects to `/invisalign-day/thank-you/`.
+On success the page pushes `generate_lead` (no form values) to the dataLayer and redirects to `invisalign-day/thank-you/index.html` (relative to the landing page).
 
 ## Tracking (GTM)
 
