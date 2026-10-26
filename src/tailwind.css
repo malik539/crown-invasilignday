@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  }
+  body {
+    @apply font-body text-[17px] leading-relaxed text-slate-700 bg-white antialiased;
+  }
+  h1, h2, h3, h4 { @apply font-heading text-navy; }
+  /* Visible focus for keyboard users everywhere */
+  :focus-visible { outline: 3px solid #1E73BE; outline-offset: 3px; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-content px-4 sm:px-6; }
+
+  /* Primary CTA: gold, 56px tall, 12px radius, arrow on the right, hover lift */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 h-14 px-6 rounded-xl bg-gold text-navy font-heading font-bold text-[17px] leading-none shadow-card
+           transition-transform duration-150 ease-out hover:-translate-y-0.5 hover:shadow-lift active:translate-y-0 focus-visible:outline-navy;
+  }
+  .btn-primary svg { @apply w-5 h-5 shrink-0; }
+  .btn-call {
+    @apply inline-flex items-center justify-center gap-2 h-14 px-6 rounded-xl border-2 border-white text-white font-heading font-bold text-[17px] leading-none
+           transition-colors hover:bg-white/10;
+  }
+
+  .eyebrow { @apply font-heading font-bold tracking-wide uppercase text-sm text-invis; }
+  .section-title { @apply font-heading font-extrabold text-3xl sm:text-4xl leading-tight text-navy; }
+  .section-lead { @apply mt-3 text-lg text-slate-600 max-w-2xl; }
+
+  .check-item { @apply flex items-start gap-3 font-medium text-navy; }
+  .check-item svg { @apply mt-1 w-5 h-5 shrink-0 text-invis; }
+
+  /* Form */
+  .field { @apply block; }
+  .field-label { @apply block text-sm font-semibold text-navy mb-1.5; }
+  .field-input {
+    @apply w-full h-12 rounded-lg border border-slate-300 bg-white px-3.5 text-[17px] text-slate-900 placeholder:text-slate-400
+           focus:border-invis focus:ring-2 focus:ring-invis/30 focus:outline-none;
+  }
+  .field-input[aria-invalid="true"] { @apply border-red-600 ring-2 ring-red-600/20; }
+  .field-error { @apply mt-1.5 text-sm font-medium text-red-700 hidden; }
+  .field-error.is-visible { @apply block; }
+  .consent-box { @apply flex items-start gap-3 text-sm text-slate-600 leading-snug; }
+  .consent-box input { @apply mt-0.5 h-5 w-5 shrink-0 rounded border-slate-400 text-invis focus:ring-invis; }
+
+  /* Trust strip */
+  .trust-item { @apply flex items-center gap-3 text-navy font-semibold text-[15px] sm:text-base; }
+  .trust-item svg { @apply w-7 h-7 shrink-0 text-invis; }
+
+  .tile { @apply rounded-2xl bg-white p-6 shadow-card border border-slate-100; }
+  .badge { @apply inline-flex items-center rounded-full bg-white border border-slate-200 px-4 py-2 text-sm font-semibold text-navy; }
+
+  /* FAQ accordion */
+  .faq-item { @apply border-b border-slate-200; }
+  .faq-trigger {
+    @apply w-full flex items-center justify-between gap-4 py-5 text-left font-heading font-bold text-navy text-lg min-h-[44px];
+  }
+  .faq-trigger svg { @apply w-6 h-6 shrink-0 text-invis transition-transform duration-200; }
+  .faq-trigger[aria-expanded="true"] svg { @apply rotate-45; }
+  .faq-panel { @apply pb-5 pr-10 text-slate-700; }
+  .faq-panel[hidden] { display: none; }
+
+  .countdown { @apply inline-flex items-center gap-2 font-heading font-bold tabular-nums; }
+  .countdown span[data-unit] { @apply inline-flex items-baseline gap-0.5; }
+  .countdown small { @apply text-[10px] font-semibold uppercase tracking-wide opacity-80; }
+
+  .star { @apply w-5 h-5 text-gold; }
+}
+
+@layer utilities {
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+}
