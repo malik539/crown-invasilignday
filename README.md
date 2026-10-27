@@ -38,7 +38,7 @@ Asset paths are relative, so the pages work opened directly from disk, served fr
 - [ ] `[PRIVACY_POLICY_URL]` in the footer.
 - [ ] `[CANONICAL_URL]` in the `<head>`.
 - [ ] `GTM-XXXXXXX` in the head and body snippets on both pages.
-- [ ] Real photos at the three paths in `img/README.md`.
+- [x] Real photos and logo supplied (see `img/README.md`).
 - [ ] Event date/year: countdown and calendar times are set for Nov 21, 2026 (`data-countdown-start` / `data-countdown-end` in `index.html`, `startUtc` / `endUtc` in the thank-you page). Change if the year differs.
 
 ## Form submission
