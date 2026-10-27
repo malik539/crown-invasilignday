@@ -292,3 +292,20 @@
   if (document.readyState === 'complete') applySitelinkScroll();
   else window.addEventListener('load', applySitelinkScroll);
 })();
+
+/* ---------- Reviews ticker: pause/play control (WCAG 2.2.2) ---------- */
+(function () {
+  var ticker = document.querySelector('[data-ticker]');
+  var toggle = document.querySelector('[data-ticker-toggle]');
+  if (!ticker || !toggle) return;
+  var label = toggle.querySelector('[data-ticker-label]');
+  var iconPause = toggle.querySelector('[data-icon-pause]');
+  var iconPlay = toggle.querySelector('[data-icon-play]');
+  toggle.addEventListener('click', function () {
+    var paused = ticker.classList.toggle('is-paused');
+    toggle.setAttribute('aria-pressed', paused ? 'true' : 'false');
+    if (label) label.textContent = paused ? 'Play reviews' : 'Pause reviews';
+    if (iconPause) iconPause.classList.toggle('hidden', paused);
+    if (iconPlay) iconPlay.classList.toggle('hidden', !paused);
+  });
+})();

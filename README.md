@@ -29,7 +29,7 @@ Asset paths are relative, so the pages work opened directly from disk, served fr
 - [ ] `[PHONE]` in every `tel:` link and visible phone text (landing page, thank-you page, ICS/Google Calendar description).
 - [ ] `[HOURS]` in the footer and thank-you page.
 - [ ] `[X.X stars from N Google reviews]` in the trust strip and reviews section.
-- [ ] `[REVIEW 1]`, `[REVIEW 2]`, `[REVIEW 3]` + `[First name L.]` from the practice's Google profile.
+- [x] Twelve verified Google reviews added verbatim in the reviews ticker (first name + last initial).
 - [ ] `[OPTIONAL DR. QUOTE]`: fill in, or delete the `<blockquote>` in the Meet Dr. Nguyen section.
 - [ ] `[CONDITIONS ...]` for free whitening (offer tile) and `[WHITENING CONDITIONS ...]` (FAQ 8).
 - [ ] `[ELIGIBILITY ...]` (FAQ 2) and `[ELIGIBILITY TERMS]` (footer): attendees on Nov 21 only, or anyone who books by Nov 21.

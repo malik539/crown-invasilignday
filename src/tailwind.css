@@ -77,3 +77,21 @@
 @layer utilities {
   .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
 }
+
+/* Google reviews ticker */
+@layer components {
+  .ticker { @apply relative overflow-hidden -mx-4 sm:-mx-6 px-4 sm:px-6; }
+  .ticker::before, .ticker::after { content: ""; @apply pointer-events-none absolute inset-y-0 w-10 sm:w-16 z-10; }
+  .ticker::before { @apply left-0 bg-gradient-to-r from-white to-transparent; }
+  .ticker::after { @apply right-0 bg-gradient-to-l from-white to-transparent; }
+  .ticker-track { @apply flex gap-4 w-max; animation: ticker-scroll 110s linear infinite; }
+  .ticker:hover .ticker-track, .ticker:focus-within .ticker-track, .ticker.is-paused .ticker-track { animation-play-state: paused; }
+  .review-card { @apply w-[320px] sm:w-[360px] shrink-0 rounded-2xl bg-white p-5 shadow-card border border-slate-100 flex flex-col; }
+  .review-card blockquote { display: -webkit-box; -webkit-line-clamp: 8; -webkit-box-orient: vertical; overflow: hidden; }
+  @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .ticker { @apply overflow-x-auto; }
+    .ticker-track { animation: none; }
+    .ticker-track > [aria-hidden="true"] { display: none; }
+  }
+}
