@@ -28,7 +28,7 @@ Asset paths are relative, so the pages work opened directly from disk, served fr
 
 - [ ] `[PHONE]` in every `tel:` link and visible phone text (landing page, thank-you page, ICS/Google Calendar description).
 - [ ] `[HOURS]` in the footer and thank-you page.
-- [ ] `[X.X stars from N Google reviews]` in the trust strip and reviews section.
+- [x] Google rating set to 4.9 stars from 696 reviews (trust strip and reviews section). Update the count before launch if it changes.
 - [x] Twelve verified Google reviews added verbatim in the reviews ticker (first name + last initial).
 - [ ] `[OPTIONAL DR. QUOTE]`: fill in, or delete the `<blockquote>` in the Meet Dr. Nguyen section.
 - [ ] `[CONDITIONS ...]` for free whitening (offer tile) and `[WHITENING CONDITIONS ...]` (FAQ 8).
