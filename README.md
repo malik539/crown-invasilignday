@@ -32,7 +32,6 @@ Asset paths are relative, so the pages work opened directly from disk, served fr
 - [ ] `[OPTIONAL DR. QUOTE]`: fill in, or delete the `<blockquote>` in the Meet Dr. Nguyen section.
 - [ ] `[CONDITIONS ...]` for free whitening (offer tile) and `[WHITENING CONDITIONS ...]` (FAQ 8).
 - [ ] `[ELIGIBILITY ...]` (FAQ 2) and `[ELIGIBILITY TERMS]` (footer): attendees on Nov 21 only, or anyone who books by Nov 21.
-- [ ] `[YEAR]` in the footer legal line and copyright.
 - [ ] `[FORM_ENDPOINT_URL]`: the `action` attribute on both `<form>` tags (CRM webhook / GoHighLevel inbound webhook). Until set, submits log a console warning and still redirect so the funnel can be QA'd.
 - [ ] `[CANONICAL_URL]` in the `<head>`.
 - [ ] `GTM-XXXXXXX` in the head and body snippets on both pages.
