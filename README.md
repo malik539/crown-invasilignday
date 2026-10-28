@@ -27,7 +27,6 @@ Asset paths are relative, so the pages work opened directly from disk, served fr
 ## Launch checklist (every `[BRACKETED]` placeholder is visible on the page until replaced)
 
 - [x] Phone set to 301-450-6730 (`tel:+13014506730`) on both pages and in the calendar event.
-- [ ] `[HOURS]` in the footer and thank-you page.
 - [x] Google rating set to 4.9 stars from 696 reviews (trust strip and reviews section). Update the count before launch if it changes.
 - [x] Twelve verified Google reviews added verbatim in the reviews ticker (first name + last initial).
 - [ ] `[OPTIONAL DR. QUOTE]`: fill in, or delete the `<blockquote>` in the Meet Dr. Nguyen section.
