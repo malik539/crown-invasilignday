@@ -29,11 +29,9 @@ Asset paths are relative, so the pages work opened directly from disk, served fr
 - [x] Phone set to 301-450-6730 (`tel:+13014506730`) on both pages and in the calendar event.
 - [x] Google rating set to 4.9 stars from 696 reviews (trust strip and reviews section). Update the count before launch if it changes.
 - [x] Twelve verified Google reviews added verbatim in the reviews ticker (first name + last initial).
-- [ ] `[OPTIONAL DR. QUOTE]`: fill in, or delete the `<blockquote>` in the Meet Dr. Nguyen section.
-- [ ] `[CONDITIONS ...]` for free whitening (offer tile) and `[WHITENING CONDITIONS ...]` (FAQ 8).
-- [ ] `[ELIGIBILITY ...]` (FAQ 2) and `[ELIGIBILITY TERMS]` (footer): attendees on Nov 21 only, or anyone who books by Nov 21.
-- [ ] `[FORM_ENDPOINT_URL]`: the `action` attribute on both `<form>` tags (CRM webhook / GoHighLevel inbound webhook). Until set, submits log a console warning and still redirect so the funnel can be QA'd.
-- [ ] `[CANONICAL_URL]` in the `<head>`.
+- [ ] Form endpoint: set the `action` attribute on both `<form>` tags (currently empty) to the CRM webhook / GoHighLevel inbound webhook URL. Until set, submits log a console warning and still redirect so the funnel can be QA'd.
+- [ ] Optional: add a `<link rel="canonical">` in the `<head>` once the live URL is known.
+- [ ] Confirm wording: whitening conditions (offer tile + FAQ 8) and eligibility (FAQ 2) are written neutrally; tighten them if the practice has specific terms.
 - [ ] `GTM-XXXXXXX` in the head and body snippets on both pages.
 - [x] Real photos and logo supplied (see `img/README.md`).
 - [ ] Event date/year: countdown and calendar times are set for Nov 21, 2026 (`data-countdown-start` / `data-countdown-end` in `index.html`, `startUtc` / `endUtc` in the thank-you page). Change if the year differs.
